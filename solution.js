@@ -5,6 +5,11 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
+  let newArr = []
+  nums.forEach((num) => {
+    newArr.push(num)
+  })
+  return newArr
 }
 
 function returnSums(nums) {
@@ -13,6 +18,12 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+  let newArr = []
+  nums.forEach((arr, n) => {
+    arr = arr + n
+    newArr.push(arr)
+  })
+  return newArr
 }
 
 function returnTotal(objs) {
@@ -21,6 +32,11 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+  let { n } = objs
+  objs.n.forEach((num, x) => {
+    num = num + num
+  })
+  return num
 }
 
 function printMoney(decimals) {
@@ -33,6 +49,11 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  let newArr = []
+  const dollars = decimals.map((num) => {
+    newArr.push('$' + num.toFixed(2))
+  })
+  return newArr
 }
 
 function returnAllTrueValues(values) {
@@ -40,6 +61,11 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+  let { happy } = values[i]
+  let newArr = values.filter((obj, i) => {
+    return (happy = true)
+  })
+  return newArr
 }
 
 function addTwo(nums) {
@@ -50,6 +76,10 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+  let plusTwo = nums.reduce((total, val) => {
+    return total + val + 2
+  }, 0)
+  return plusTwo
 }
 
 function joinStrings(strings) {
@@ -57,6 +87,10 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  let newString = strings.reduce((total, val) => {
+    return total
+  }, 0)
+  return newString
 }
 
 //Bonus
